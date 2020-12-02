@@ -10,9 +10,7 @@ parse str = (read minStr, read maxStr, head ltrStr, pw)
     pw = tail str'''
 
 ok :: (Int, Int, Char, String) -> Bool
-ok (mn,mx,l,pw) = (pw !! mn == l) `xor` (pw !! mx == l)
-  where
-    xor a b = not a && b || a && not b
+ok (mn,mx,l,pw) = (pw !! mn == l) /= (pw !! mx == l)
 
 solve :: [String] -> Int
 solve [] = 0
