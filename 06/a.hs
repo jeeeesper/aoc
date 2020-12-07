@@ -5,5 +5,4 @@ main :: IO ()
 main = interact $ show . solve . map unpack . splitOn (pack "\n\n") . pack
 
 solve :: [String] -> Int
-solve []     = 0
-solve (s:ss) = (length . nub . filter ((/=) '\n')) s + solve ss
+solve ss = sum $ map (length . nub . filter ((/=) '\n')) ss
