@@ -14,7 +14,7 @@ parseInstruction i = case ins of "nop" -> NOP val
                                  "jmp" -> JMP val
                                  _     -> error "parse error"
   where
-    (ins, _:s:val') = break ((==) ' ') i
+    (ins, _:s:val') = break (' ' ==) i
     val | s == '+'  = read val' :: Int
         | otherwise = read (s:val') :: Int
 

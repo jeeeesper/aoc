@@ -15,6 +15,6 @@ input s = go s [] 0 0
 solve :: Integer -> Integer -> Map -> Integer
 solve r d (maxX, maxY, trees) = go 0 0
   where
-    go x y | y > maxY         = 0
-           | elem (x,y) trees = 1 + go (mod (x+r) maxX) (y+d)
-           | otherwise        = go (mod (x+r) maxX) (y+d)
+    go x y | y > maxY           = 0
+           | (x,y) `elem` trees = 1 + go (mod (x+r) maxX) (y+d)
+           | otherwise          = go (mod (x+r) maxX) (y+d)

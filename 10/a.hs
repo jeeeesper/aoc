@@ -1,4 +1,4 @@
-import Data.List
+import Data.List (sort)
 
 main :: IO ()
 main = interact $ show . solve . sort . map read . lines

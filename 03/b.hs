@@ -16,11 +16,11 @@ input s = go s [] 0 0
                      | otherwise = error "Ich raste aus!"
 
 solve' :: Map -> Integer
-solve' m = foldr (*) 1 [solve r d m | (r,d) <- rdPairs]
+solve' m = product [solve r d m | (r,d) <- rdPairs]
 
 solve :: Integer -> Integer -> Map -> Integer
 solve r d (maxX, maxY, trees) = go 0 0
   where
-    go x y | y > maxY         = 0
-           | elem (x,y) trees = 1 + go (mod (x+r) maxX) (y+d)
-           | otherwise        = go (mod (x+r) maxX) (y+d)
+    go x y | y > maxY           = 0
+           | (x,y) `elem` trees = 1 + go (mod (x+r) maxX) (y+d)
+           | otherwise          = go (mod (x+r) maxX) (y+d)

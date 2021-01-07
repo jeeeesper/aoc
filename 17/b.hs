@@ -1,4 +1,4 @@
-import Data.Array
+import Data.Array (Array, array, bounds, elems, indices, (!), (//))
 
 type Map = Array (Int, Int, Int, Int) Bool
 

@@ -1,4 +1,4 @@
-import Data.Array
+import Data.Array (listArray, (!), (//))
 
 main :: IO ()
 main = interact $ show . solve . input

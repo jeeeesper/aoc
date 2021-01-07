@@ -1,8 +1,10 @@
+import Data.Bifunctor (second)
+
 main :: IO ()
 main = interact $ show . solve . input
 
 input :: String -> [(Integer, Integer)]
-input = map (\(i,a) -> (i,read a)) . filter ((/=)"x" . snd) . zip [0..] . words . map (\c -> if c==',' then ' ' else c) . flip (!!) 1 . lines
+input = map (second read) . filter ((/=) "x" . snd) . zip [0..] . words . map (\c -> if c==',' then ' ' else c) . flip (!!) 1 . lines
 
 solve :: [(Integer,Integer)] -> Integer
 solve = go 0 1

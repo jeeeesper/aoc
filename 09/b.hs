@@ -1,4 +1,4 @@
-import Data.List
+import Data.List (inits, tails)
 
 main :: IO ()
 main = interact $ show . solve . reverse . map read . lines

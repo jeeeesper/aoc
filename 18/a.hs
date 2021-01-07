@@ -9,6 +9,6 @@ parseLine = fst . last . readP_to_S expr
 expr :: ReadP Int
 expr = token `chainl1` (plus +++ times)
   where
-    token = between (char '(') (char ')') expr +++ (read <$> munch1 (flip elem ['0'..'9']))
+    token = between (char '(') (char ')') expr +++ (read <$> munch1 (`elem` ['0'..'9']))
     plus = (+) <$ char '+'
     times = (*) <$ char '*'

@@ -1,4 +1,4 @@
-import Data.Bits
+import Data.Bits (clearBit, setBit)
 import Data.Map (empty, insert, elems)
 
 data Instruction = Mask [Char] | Mem Int Int
@@ -10,7 +10,7 @@ input :: String -> [Instruction]
 input = map parseLine . lines
   where
     parseLine ('m':'a':'s':'k':' ':'=':' ':m) = Mask m
-    parseLine ('m':'e':'m':'[':l') = Mem (read $ takeWhile (/= ']') l') (read $ words l' !! 2)
+    parseLine ('m':'e':'m':'[':l') = Mem (read $ takeWhile (']' /=) l') (read $ words l' !! 2)
     parseLine _ = error "unknown expression"
 
 applyMask :: [Char] -> Int -> Int

@@ -50,6 +50,6 @@ makeParser cfg (NonTerminal a) = makeParser cfg $ cfg ! a
 solve :: CFG -> [String] -> Int
 solve cfg = length . filter id . map valid
   where
-    parse = readP_to_S $ (makeParser cfg $ NonTerminal "0") <* eof
+    parse = readP_to_S $ makeParser cfg (NonTerminal "0") <* eof
     valid s = case parse s of (_,""):_ -> True
                               _        -> False

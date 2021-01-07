@@ -10,6 +10,6 @@ expr :: ReadP Int
 expr = term `chainl1` times
   where
     term = factor `chainl1` plus
-    factor = between (char '(') (char ')') expr +++ ( read <$> munch1 (flip elem ['0'..'9']))
+    factor = between (char '(') (char ')') expr +++ ( read <$> munch1 (`elem` ['0'..'9']))
     plus = (+) <$ char '+'
     times = (*) <$ char '*'

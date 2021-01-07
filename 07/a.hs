@@ -1,4 +1,5 @@
 import Data.List (nub)
+import Data.Bifunctor (first)
 
 main :: IO ()
 main = interact $ show . solve . input
@@ -7,7 +8,7 @@ parseLine :: String -> [(String, String)]
 parseLine l = [(c, bag) | (_,c) <- containing]
   where
     ws = words l
-    (bag, _:_:l') = (\(x,y) -> (concat x, y)) $ splitAt 2 ws
+    (bag, _:_:l') = first concat $ splitAt 2 ws
     go :: [String] -> [(String, String)]
     containing = go l'
     go [] = []

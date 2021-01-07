@@ -15,5 +15,5 @@ reqFields = [ "\\bbyr:(19[2-9][0-9]|200[0-2])\\b"
 
 solve :: [String] -> Integer
 solve [] = 0
-solve (pp:pps) | and $ map ((=~) pp) reqFields = 1 + solve pps
-               | otherwise                     = solve pps
+solve (pp:pps) | all (pp =~) reqFields = 1 + solve pps
+               | otherwise             = solve pps
