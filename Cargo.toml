@@ -170,3 +170,11 @@ path = "21/a.rs"
 [[bin]]
 name = "21_b"
 path = "21/b.rs"
+
+[[bin]]
+name = "22_a"
+path = "22/a.rs"
+
+[[bin]]
+name = "22_b"
+path = "22/b.rs"
