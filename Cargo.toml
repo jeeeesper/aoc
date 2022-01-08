@@ -1,0 +1,201 @@
+[package]
+name = "AoC21"
+version = "1.0.0"
+authors = [ "Jasper" ]
+
+[[bin]]
+name = "01_a"
+path = "01/a.rs"
+
+[[bin]]
+name = "01_b"
+path = "01/b.rs"
+
+[[bin]]
+name = "02_a"
+path = "02/a.rs"
+
+[[bin]]
+name = "02_b"
+path = "02/b.rs"
+
+[[bin]]
+name = "03_a"
+path = "03/a.rs"
+
+[[bin]]
+name = "03_b"
+path = "03/b.rs"
+
+[[bin]]
+name = "04_a"
+path = "04/a.rs"
+
+[[bin]]
+name = "04_b"
+path = "04/b.rs"
+
+[[bin]]
+name = "05_a"
+path = "05/a.rs"
+
+[[bin]]
+name = "05_b"
+path = "05/b.rs"
+
+[[bin]]
+name = "06_a"
+path = "06/a.rs"
+
+[[bin]]
+name = "06_b"
+path = "06/b.rs"
+
+[[bin]]
+name = "07_a"
+path = "07/a.rs"
+
+[[bin]]
+name = "07_b"
+path = "07/b.rs"
+
+[[bin]]
+name = "08_a"
+path = "08/a.rs"
+
+[[bin]]
+name = "08_b"
+path = "08/b.rs"
+
+[[bin]]
+name = "09_a"
+path = "09/a.rs"
+
+[[bin]]
+name = "09_b"
+path = "09/b.rs"
+
+[[bin]]
+name = "10_a"
+path = "10/a.rs"
+
+[[bin]]
+name = "10_b"
+path = "10/b.rs"
+
+[[bin]]
+name = "11_a"
+path = "11/a.rs"
+
+[[bin]]
+name = "11_b"
+path = "11/b.rs"
+
+[[bin]]
+name = "12_a"
+path = "12/a.rs"
+
+[[bin]]
+name = "12_b"
+path = "12/b.rs"
+
+[[bin]]
+name = "13_a"
+path = "13/a.rs"
+
+[[bin]]
+name = "13_b"
+path = "13/b.rs"
+
+[[bin]]
+name = "14_a"
+path = "14/a.rs"
+
+[[bin]]
+name = "14_b"
+path = "14/b.rs"
+
+[[bin]]
+name = "15_a"
+path = "15/a.rs"
+
+[[bin]]
+name = "15_b"
+path = "15/b.rs"
+
+[[bin]]
+name = "16_a"
+path = "16/a.rs"
+
+[[bin]]
+name = "16_b"
+path = "16/b.rs"
+
+[[bin]]
+name = "17_a"
+path = "17/a.rs"
+
+[[bin]]
+name = "17_b"
+path = "17/b.rs"
+
+[[bin]]
+name = "18_a"
+path = "18/a.rs"
+
+[[bin]]
+name = "18_b"
+path = "18/b.rs"
+
+[[bin]]
+name = "19_a"
+path = "19/a.rs"
+
+[[bin]]
+name = "19_b"
+path = "19/b.rs"
+
+[[bin]]
+name = "20_a"
+path = "20/a.rs"
+
+[[bin]]
+name = "20_b"
+path = "20/b.rs"
+
+[[bin]]
+name = "21_a"
+path = "21/a.rs"
+
+[[bin]]
+name = "21_b"
+path = "21/b.rs"
+
+[[bin]]
+name = "22_a"
+path = "22/a.rs"
+
+[[bin]]
+name = "22_b"
+path = "22/b.rs"
+
+[[bin]]
+name = "23_a"
+path = "23/a.rs"
+
+[[bin]]
+name = "23_b"
+path = "23/b.rs"
+
+[[bin]]
+name = "24_a"
+path = "24/a.rs"
+
+[[bin]]
+name = "24_b"
+path = "24/b.rs"
+
+[[bin]]
+name = "25_a"
+path = "25/a.rs"
+

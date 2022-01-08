@@ -1,0 +1,25 @@
+#!/bin/bash
+
+SESSION=<insert session id here>
+
+if [ "$1" -lt 10 ]; then
+    DIR="0$1"
+else
+    DIR=$1
+fi
+
+SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+mkdir -p "$SCRIPT_DIR/$DIR"
+
+if [ ! -f "$SCRIPT_DIR/$DIR/a.rs" ]; then
+    printf "fn main() {\n    \n}\n" >"$SCRIPT_DIR/$DIR/a.rs"
+fi
+if [ ! -f "$SCRIPT_DIR/$DIR/b.rs" ]; then
+    printf "fn main() {\n    \n}\n" >"$SCRIPT_DIR/$DIR/b.rs"
+fi
+if ! grep -q $DIR "$SCRIPT_DIR/Cargo.toml"; then
+    printf "\n[[bin]]\nname = \"%s_a\"\npath = \"%s/a.rs\"\n" "$DIR" "$DIR" >>"$SCRIPT_DIR/Cargo.toml"
+    printf "\n[[bin]]\nname = \"%s_b\"\npath = \"%s/b.rs\"\n" "$DIR" "$DIR" >>"$SCRIPT_DIR/Cargo.toml"
+fi
+
+curl "https://adventofcode.com/2021/day/$1/input" -sb session=$SESSION >"$SCRIPT_DIR/$DIR/input"
