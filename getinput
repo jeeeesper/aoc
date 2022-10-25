@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SESSION=<insert session cookie here>
+
+if [ "$2" -lt 10 ]; then
+    DIR="0$2"
+else
+    DIR=$2
+fi
+
+SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+mkdir -p "$SCRIPT_DIR/$1/$DIR"
+
+curl "https://adventofcode.com/$1/day/$2/input" -sb session=$SESSION >"$SCRIPT_DIR/$1/$DIR/input"
