@@ -2,3 +2,4 @@
 **/*.lock
 **/target/
 getinput
+testinput
