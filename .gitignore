@@ -1,5 +1,10 @@
+# Ignore files without file ending (aka input, executables)
+20*/*/*
+!20*/*/*.*
+
 **/input
 **/*.lock
 **/target/
 getinput
-testinput
+
+.vscode/*
