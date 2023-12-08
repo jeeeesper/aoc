@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-#include "../common.cpp"
+#include "../common.h"
 
 typedef std::vector<int> gear_t;
 

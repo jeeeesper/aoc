@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-#include "../common.cpp"
+#include "../common.h"
 
 inline bool is_num(const char c) { return c >= '0' && c <= '9'; }
 inline bool is_symbol(const char c) { return !is_num(c) && c != '.'; }

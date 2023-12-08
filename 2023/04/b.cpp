@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <numeric>
 
-#include "../common.cpp"
+#include "../common.h"
 
 int main() {
   std::vector<int> matches;

@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-#include "../common.cpp"
+#include "../common.h"
 
 struct Range {
   size_t dest_start;

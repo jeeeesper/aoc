@@ -2,7 +2,7 @@
 #include <set>
 #include <algorithm>
 
-#include "../common.cpp"
+#include "../common.h"
 
 int main() {
   unsigned int sum;

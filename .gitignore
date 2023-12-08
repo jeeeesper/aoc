@@ -1,6 +1,7 @@
 # Ignore files without file ending (aka input, executables)
 20*/*/*
 !20*/*/*.*
+20*/**/*.o
 
 **/input
 **/*.lock

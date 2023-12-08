@@ -1,4 +1,4 @@
-#include "common.hpp"
+#include "common.h"
 
 std::vector<std::string> util::split_string(const std::string& s, char delim) {
   std::vector<std::string> v;
