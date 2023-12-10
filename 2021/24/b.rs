@@ -1,6 +1,4 @@
-use std::{
-    io::{self, BufRead},
-};
+use std::{io::{self, BufRead}, collections::HashMap};
 
 enum Argument {
     Reg(usize),

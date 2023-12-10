@@ -17,7 +17,7 @@ fn count_paths<'a>(graph : &HashMap::<&'a str, Vec<&'a str>>, mut visited : Hash
             duplicate = true;
         }
     }
-    visited.insert(v.clone());
+    visited.insert(v);
     let mut sum = 0;
     for w in &graph[&v] {
         sum += count_paths(graph, visited.clone(), w, duplicate);
