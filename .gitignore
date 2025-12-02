@@ -4,6 +4,7 @@
 20*/**/*.o
 
 **/input
+**/input.small
 **/*.lock
 **/target/
 getinput
